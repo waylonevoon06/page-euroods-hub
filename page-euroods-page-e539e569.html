@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欧赔 · 数据站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f3ed;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 740px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+        }
+
+        /* 文章头部 */
+        .post-header {
+            border-bottom: 1px solid #e2dbd0;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #2c241d;
+            margin-bottom: 0.4rem;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #8b8278;
+            font-style: italic;
+            margin-top: 0.3rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #4a4037;
+            background: #f9f5ef;
+            padding: 0.6rem 1.2rem;
+            border-left: 4px solid #c5b5a3;
+            margin: 1.2rem 0 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* 正文段落 */
+        .content p {
+            margin-bottom: 1.3rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .content p:last-of-type {
+            margin-bottom: 2.2rem;
+        }
+
+        /* 引用提示块 */
+        .insight-box {
+            background: #f1ece4;
+            border-left: 5px solid #b7a694;
+            padding: 1.1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 2px 6px 6px 2px;
+            font-size: 0.97rem;
+            color: #3d362f;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .insight-box strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #2f2820;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #735e4b;
+            text-decoration: none;
+            border-bottom: 1px dotted #c0b2a1;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #3b2f25;
+            border-bottom: 1px solid #3b2f25;
+        }
+
+        /* 场景/特点小卡片 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0 1.8rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #faf8f5;
+            padding: 0.9rem 1.2rem;
+            border-radius: 6px;
+            border: 1px solid #e7e0d6;
+            font-size: 0.95rem;
+            color: #3f3a33;
+        }
+
+        .feature-item span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #2d2822;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #f5f0ea;
+            padding: 1.2rem 1.4rem;
+            margin: 1.8rem 0 1.2rem 0;
+            border-radius: 6px;
+        }
+
+        .faq-summary dt {
+            font-weight: 600;
+            margin-top: 0.6rem;
+            color: #2c241d;
+        }
+
+        .faq-summary dt:first-of-type {
+            margin-top: 0;
+        }
+
+        .faq-summary dd {
+            margin-left: 0.6rem;
+            color: #4f463c;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed #ddd5cb;
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-summary dd:last-of-type {
+            border-bottom: none;
+        }
+
+        /* 访问句 */
+        .visit-remark {
+            margin-top: 2.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e4ddd3;
+            font-size: 0.98rem;
+            color: #5b5147;
+            text-align: center;
+            font-style: normal;
+            letter-spacing: 0.3px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            .post-title {
+                font-size: 1.6rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+            .feature-item {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="post-header">
+        <h1 class="post-title">关于欧赔 · 一处安静的数据角落</h1>
+        <div class="post-meta">站点笔记 · 可信与实用之间</div>
+    </header>
+
+    <div class="content">
+        <p class="lead">
+            如果你对「欧赔」这个领域抱有好奇，或者正在寻找一个结构清晰、更新稳定的参考源，那么这里或许值得你花几分钟了解。
+        </p>
+
+        <p>
+            许多年前，我开始整理欧洲赔率相关的公开数据，初衷很简单：市面上的信息往往零散、广告化，或者需要繁琐的注册流程。我希望有一个地方，能以尽量朴素的方式，把核心的赔率变动、主流市场的对比，以及一些基础的分析思路，放在一起——不加多余的装饰，也不引导任何人做出非理性的判断。<a href="https://page-euroods.com">欧赔</a>这个站点，就是在这样的想法下逐步搭建起来的。
+        </p>
+
+        <p>
+            站内的数据主要来源于公开的体育赛事赔率，经过整理和交叉校验后呈现。每一组数字都保留了原始出处的时间戳和主流公司标识，方便你自行比对。我们不生产预测，也不提供投资建议，只是尽力让赔率数据变得更加透明、容易检索。如果你习惯于独立分析，这里的数据结构应该能省去你不少复制粘贴的精力。
+        </p>
+
+        <!-- 引用提示块 -->
+        <div class="insight-box">
+            <strong>一个简单的提示</strong>
+            赔率数字本身只是市场情绪的映射，它不等于赛果，也不代表任何保证。请始终结合自己的判断来使用，保持理性。
+        </div>
+
+        <p>
+            除了基础的赔率列表，站点还保留了部分历史对比视图和简单统计。这些功能不是为了炫技，而是希望帮助你更快地捕捉到一些细微的趋势变化。所有内容都采用静态页面的方式呈现，加载速度较快，也没有弹窗或追踪脚本——这也是我最初决定使用 GitHub Pages 来托管的原因之一。
+        </p>
+
+        <!-- 特点小卡片 -->
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span>无广告</span>
+                页面干净，没有浮动横幅或推广链接。
+            </div>
+            <div class="feature-item">
+                <span>可追溯</span>
+                每个数据都标注了采集时间，方便回查。
+            </div>
+            <div class="feature-item">
+                <span>轻量访问</span>
+                纯静态结构，移动端阅读同样流畅。
+            </div>
+        </div>
+
+        <p>
+            关于可信度：数据源的选取上，站点只收录了那些长期存在、公开透明的赔率平台所发布的信息，并尽量避免二手加工。同时，更新频率保持在每个比赛日前后做一次集中同步，不会过度频繁地刷屏。如果你发现某组数据与官方渠道有出入，欢迎通过站点页脚的方式反馈——当然，目前站点还没有复杂的后端系统，沟通方式也比较朴素。
+        </p>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <dl>
+                <dt>Q: 站点适合完全的新手吗？</dt>
+                <dd>适合。页面没有使用行业黑话，大部分专有名词都有简单标注，你可以先浏览「基础说明」板块。</dd>
+                <dt>Q: 数据会实时更新吗？</dt>
+                <dd>不是实时，但每个主要比赛日之前都会做一次批量更新，保证数据相对新鲜。</dd>
+                <dt>Q: 是否收费或需要注册？</dt>
+                <dd>完全免费，无需注册，直接访问即可浏览所有内容。</dd>
+            </dl>
+        </div>
+
+        <p>
+            总而言之，<a href="https://page-euroods.com">欧赔</a>更像是一个安静的参考书架，而不是热闹的行情大厅。它不会催促你做出选择，也不会用闪烁的数字制造焦虑。你可以把它当作一个工具，在需要的时候打开，查一查，想一想，然后关掉。这种克制的使用方式，也正是我当初制作它时最希望看到的状态。
+        </p>
+    </div>
+
+    <!-- 访问句 -->
+    <div class="visit-remark">
+        ✦ 如果你认同这种平实的数据分享方式，随时可以过来看看。<br>
+        站点地址依然不变，也一直会是这个样子。
+    </div>
+</div>
+</body>
+</html>
